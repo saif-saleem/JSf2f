@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <p>Student Portal</p>
+    </div>
+    <div class="main_body">
+        <div class="search_bar">
+            <input id="search" type="text" placeholder="Search">
+            <button class="btn" id="search_btn" onClick="searchData()">Search</button>
+        </div>
+        <div class="sort_bar">
+            <button class="btn1" onclick="sortBy('nameAsc')">Sort Z->A</button>
+            <button class="btn1" onclick="sortBy('nameDesc')">Sort A->Z</button>
+            <button class="btn1" onclick="sortBy('marks')">Sort By Marks</button>
+            <button class="btn1" onclick="sortBy('pass')">Sort By Passing</button>
+            <button class="btn1" onclick="sortBy('class')"">Sort By Class</button>
+            <button class="btn1" onclick="sortBy('gender')">Sort By Gender</button>
+        </div>
+        <div class="result_table">
+            <table>
+                <thead id="tb">
+                    <tr>
+                    <th id="id">ID</th>
+                    <th id="name">Name</th>
+                    <th id="gn">Gender</th>
+                    <th id="cl">Class</th>
+                    <th id="mr">Marks</th>
+                    <th id="ps">Passing</th>
+                    <th id="ml">Email</th>
+                </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <div class="female_table" style="display:none">
+            <h2>Female Students</h2>
+            <table id="fetable">
+                <thead id="ftb" ">
+                    <tr>
+                    <th id="fid">ID</th>
+                    <th id="fname">Name</th>
+                    <th id="fgn">Gender</th>
+                    <th id="fcl">Class</th>
+                    <th id="fmr">Marks</th>
+                    <th id="fps">Passing</th>
+                    <th id="fml">Email</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            </table>
+        </div>
+
+        <div class="male_table" style="display:none">
+            <h2>Male Students</h2>
+            <table id="matable">
+                <thead id="mtb" ">
+                    <tr>
+                    <th id="mid">ID</th>
+                    <th id="mname">Name</th>
+                    <th id="mgn">Gender</th>
+                    <th id="mcl">Class</th>
+                    <th id="mmr">Marks</th>
+                    <th id="mps">Passing</th>
+                    <th id="mml">Email</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
